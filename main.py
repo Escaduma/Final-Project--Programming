@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 
-
 book=Tk()
 book.title("Book Database")
 book.geometry("600x400")
@@ -24,7 +23,5 @@ recBookButton.grid(row=2, column=0, pady=10)
 rightPanel = Frame(book, bg="#f0f0f0", width=400, height=400)
 rightPanel.pack(side="left", fill="both", expand=True, padx=20, pady=20)
 
-rightLabel = Label(rightPanel, bg="#f0f0f0", font=("Poppins", 14))
-rightLabel.pack(pady=20)
 
 book.mainloop()
