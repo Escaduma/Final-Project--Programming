@@ -21,17 +21,17 @@ def clearRightPanel(rightPanel):
         widget.destroy()
 
 def addBook(title, author,genre, year, description, read):
-    workbook=load_workbook("BooksList.xlsx")
+    workbook=load_workbook("info/BooksList.xlsx")
     sheet=workbook.active
     status = "Read" if read == 1 else "Not Read"
     row=[title, author, genre, year, description, status]
     sheet.append(row)
-    workbook.save("BooksList.xlsx")
+    workbook.save("info/BooksList.xlsx")
     messagebox.showinfo("Saved", "Your book has been saved!!")
 
 def showAddBookForm(rightPanel):
     clearRightPanel(rightPanel)
-    bg = PhotoImage(file="add.png")
+    bg = PhotoImage(file="info/add.png")
     bgLabel = Label(rightPanel, image=bg)
     bgLabel.place(x=0, y=0, relwidth=1, relheight=1)
     bgLabel.image = bg
@@ -73,7 +73,7 @@ def showAddBookForm(rightPanel):
 
 def showRemoveBookForm(rightPanel):
     clearRightPanel(rightPanel)
-    bg = PhotoImage(file="remove.png")
+    bg = PhotoImage(file="info/remove.png")
     bgLabel = Label(rightPanel, image=bg)
     bgLabel.place(x=0, y=0, relwidth=1, relheight=1)
     bgLabel.image = bg
@@ -106,7 +106,7 @@ def showRemoveBookForm(rightPanel):
 
 def showRecommendation(rightPanel):
     clearRightPanel(rightPanel)
-    bg = PhotoImage(file="recommendation.png")
+    bg = PhotoImage(file="info/recommendation.png")
     bgLabel = Label(rightPanel, image=bg)
     bgLabel.place(x=0, y=0, relwidth=1, relheight=1)
     bgLabel.image = bg
@@ -133,7 +133,7 @@ def showRecommendation(rightPanel):
         for widget in resultFrame.winfo_children():
             widget.destroy()
 
-        workbook = load_workbook("BooksList.xlsx")
+        workbook = load_workbook("info/BooksList.xlsx")
         sheet = workbook.active
         genre = genreEntry.get().strip().lower()
         status = readVar.get()
@@ -165,7 +165,7 @@ def showBookList(rightPanel):
 
     Label(rightPanel, text="Your Books", font=("Brush Script MT", 22), bg="#FFE4E1").pack(ipady=10)
 
-    workbook = load_workbook("BooksList.xlsx")
+    workbook = load_workbook("info/BooksList.xlsx")
     sheet = workbook.active
 
     frame = Frame(rightPanel, bg="#FFE4E1")

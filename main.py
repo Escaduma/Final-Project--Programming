@@ -24,7 +24,7 @@ recBookButton.grid(row=2, column=0, pady=10)
 
 rightPanel = Frame(book, bg="#FFE4E1", width=400, height=400)
 rightPanel.pack(side="left", fill="both", expand=True, padx=20, pady=20)
-bg = PhotoImage(file="libros.png")
+bg = PhotoImage(file="info/libros.png")
 bgLabel = Label(rightPanel, image=bg)
 bgLabel.place(x=0, y=0, relwidth=1, relheight=1)
 bgLabel.image = bg
