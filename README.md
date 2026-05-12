@@ -6,7 +6,7 @@
     The program was designed to manage the books that you have in your house using a graphical interface, meaning that the user can add, remove, and view the books saved in an Excel file, it also recommends book based on genre and read status.
 
 # Installation:
-    The libraries openpyxl and tkinter are needed
+    The libraries openpyxl, tkinter, and random are needed
 
 # Usage:
     1. Run the file main.py
